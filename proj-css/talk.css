@@ -1,0 +1,10 @@
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+
+.reveal section img.borderless {
+  border-style: none;
+  box-shadow: none;
+  background: transparent;
+}
