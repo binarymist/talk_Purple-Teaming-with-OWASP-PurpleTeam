@@ -6,10 +6,11 @@
 
 * Welcome
 * InfoSecNZ Slack, OWASP Slack
-* <a href="https://purpleteam-labs.com" target="_blank">purpleteam</a> now in alpha and pre-releases being published regularly
-* <!-- .element: class="fragment fade-right" --> Pete Nicholls is taking over from me
 * <!-- .element: class="fragment fade-right" --> Anything else people want to mention?
 * <!-- .element: class="fragment fade-right" --> Tonights talk (Chris - Incident Response), (Me - Application Intrusion Detection)
+
+Note:
+* Hand over to Chris
 
 ----  ----
 
@@ -52,11 +53,12 @@ Note:
 * Lack of Visibility
   * Insufficient Logging (->) & Monitoring (<-)<br/>Covered in <a href="https://f1.holisticinfosecforwebdevelopers.com/chap06.html#leanpub-auto-insufficient-logging-and-monitoring" target="_blank">Holistic Info-Sec for Web Developers</a><br/><a href="https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring" target="_blank">No. 10</a> for OWASP Top 10
 * Insufficient Attack Protection
-  * <a href="https://f1.holisticinfosecforwebdevelopers.com/chap06.html#leanpub-auto-insufficient-attack-protection" target="_blank">Lack of Active Automated Prevention</a>
+  * Book -> <a href="https://f1.holisticinfosecforwebdevelopers.com/chap06.html#leanpub-auto-insufficient-attack-protection" target="_blank">Lack of Active Automated Prevention</a>
 
 Note:
 * Talk through my book
-* Talk through OWASP A10 top and left panels
+* Talk through OWASP A10: top & left panels
+* Talk through "Lack of Active Automated Prevention"
 
 ----  ----
 
@@ -93,18 +95,42 @@ Note:
   * Active Automated Prevention
 
 Note:
-* WAF is the last think I like to apply,  
-  They're like a band-aid, no intimate knowledge of your application
+* WAF is the last thing I like to apply,  
+  They're like a band-aid, generally they don't have intimate knowledge of your application
 * Talk through "Application Intrusion Detection and Response"
 * Talk through "Active Automated Prevention"
 
 ----
 
+App Intrusion Detection->Prevention is reactive
+
+Note:
+* This is fine as a layer of defense
+* But we can do better/more
+* How?
+
+----
+
+By being proactive -> 
 <a href="https://owasp.org/www-community/Free_for_Open_Source_Application_Security_Tools" target="_blank">SAST, DAST</a>
 
 Note:
-* App Intrusion Detection & Response is being somewhat pro-active
-* But you can do better / more by removing your app vulnerabilities in the first place  
-  With the likes of SAST & DAST tooling as part of your Dev work-flows
+* We can do better/more by removing your app vulnerabilities in the first place.  
+  With concepts & tooling such as SAST & DAST as part of your Dev work-flows
 * If you want to get serious about app-sec, you really need to apply defence in depth
+
+----  ----
+
+It's been <a href="https://owasp.org/www-chapter-new-zealand/#div-history" target="_blank">8 years</a>
+
+* <!-- .element: class="fragment fade-right" --> <a href="https://purpleteam-labs.com" target="_blank">purpleteam</a> now in alpha and releases being published regularly
+* <!-- .element: class="fragment fade-right" --> It's time to let someone else take over
+* <!-- .element: class="fragment fade-right" --> Pete Nicholls is taking over from me
+* <!-- .element: class="fragment fade-right" --> Next Meetup Last Wed of Sep - Pete & Toni - Ask anything panel
+
+Note:
+1. I've lead the Chch chapter for 8 years
+2. I'm stepping down, but I'm leaving you with PurpleTeam
+3. It's time to let someone else take over
+4. You'll be in the safe hands of Pete Nicholls
 
