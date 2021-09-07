@@ -2,135 +2,250 @@
 
 <!--Cover Slide-->
 
-## Community Topics
+<span style="font-size: 5rem; color: #9b6bcc">
+  <a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>
+</span>
 
-* Welcome
-* InfoSecNZ Slack, OWASP Slack
-* <!-- .element: class="fragment fade-right" --> Anything else people want to mention?
-* <!-- .element: class="fragment fade-right" --> Tonights talk (Chris - Incident Response), (Me - Application Intrusion Detection)
+----  ----
+
+<!-- .element: data-background-image="proj-img/shirt.png" data-background-opacity="0.6" -->
+
+# What is OWASP?
 
 Note:
-* Hand over to Chris
-
-----  ----
-
-# Application Intrusion Detection
-
-----  ----
-
-HIDS, NIDS, AIDS?
-
-
-Note:
-Some TLAs
-
-----  ----
-
-1. Asset Identification
-2. Identify Risks
-3. Countermeasures
-4. Risks that Solution Causes
-5. Costs and Trade-offs
-
-Note:
-* As with everything security, let's threat model it
-* As usual (same with all my books), I like to use the SSM
-
-----  ----
-
-1. SSM&nbsp;&nbsp;&nbsp;<span style="font-size: 4rem;">Asset Identification</span>
-
-Note:
-* What are the attackers after?
-* The value of your assets will determin how much your attacker is willing to spend
-
-----  ----
-
-2. SSM&nbsp;&nbsp;&nbsp;<span style="font-size: 4rem;">Identify Risks</span>
+* PurpleTeam is a security regression testing CLI and SaaS targeting Web applications and APIs
+* The CLI is specifically targeted at sitting within your build pipelines but can also be run manually
+* The SaaS that does the security testing of your applications and/or APIs can be deployed anywhere
 
 ----
 
-* Lack of Visibility
-  * Insufficient Logging (->) & Monitoring (<-)<br/>Covered in <a href="https://f1.holisticinfosecforwebdevelopers.com/chap06.html#leanpub-auto-insufficient-logging-and-monitoring" target="_blank">Holistic Info-Sec for Web Developers</a><br/><a href="https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring" target="_blank">No. 10</a> for OWASP Top 10
-* Insufficient Attack Protection
-  * Book -> <a href="https://f1.holisticinfosecforwebdevelopers.com/chap06.html#leanpub-auto-insufficient-attack-protection" target="_blank">Lack of Active Automated Prevention</a>
+<!-- .element: data-background-image="proj-img/OWASP_PT.png" data-background-opacity="0.7" -->
+
+## The Journey
+
+</br></br></br></br></br></br></br>
 
 Note:
-* Talk through my book
-* Talk through OWASP A10: top & left panels
-* Talk through "Lack of Active Automated Prevention"
+Discuss: the 3.8 year journey that has brought purpleteam from a proof of concept (PoC) to where it is now.
+
+* Finished writing book series to help Developers up-skill their security
+* Lots of workshops with the PoC to elicit Developer feedback and confirm that what I wrote about was actually true
+* Most of that time has been 7 days a week, two full time jobs
+
+Building a tool that helps Developers write secure code is a great way to learn about security.
+If you want to learn more about information security, We'll assign you a mentor, and you can help us build PurpleTeam.
+
+----
+
+![PurpleTeam Local Architecture](proj-img/purpleteam_local_2021-08-min.png) <!-- .element: class="borderless" -->
+
+Note:
+Discuss
 
 ----  ----
 
-3. SSM&nbsp;&nbsp;&nbsp;<span style="font-size: 4rem;">Countermeasures</span>
-
-----
-
-* Lack of Visibility ...
-
-_Detection works where prevention fails and detection is of no use without response_
-
-Bruce Schneier
-
-----
-
-* Lack of Visibility</br>OWASP Top 10 - <a href="https://owasp.org/www-project-top-ten/2017/A10_2017-Insufficient_Logging%2526Monitoring" target="_blank">A10</a></br><a href="https://f1.holisticinfosecforwebdevelopers.com/chap06.html#leanpub-auto-insufficient-monitoring" target="_blank">Kim's book</a>
-    * Insufficient Logging
-    * Insufficient Monitoring
+# Why?
 
 Note:
-* Talk through the "How to Prevent" section of OWASP A10
-* Talk through My book: Dark Cockpit, Statistics Graphing with the likes of statsd, collectd, graphite
-* The tools you use depend largly on your environment  
-  You'll need something to:
-  * Capture and push the events
-  * Collect, aggregate, display & alert on the events
-    * SIEM (Security information & event management) type tools
+* How does PurpleTeam help us as Developers?
+* How does PurpleTeam help us as a business that creates software?
+* Why would I want PurpleTeam in my build pipelines?
+
+To answer these questions, I'm going to take you back to a section that's in a number of my previous talks.
 
 ----
 
-* <a href="https://f1.holisticinfosecforwebdevelopers.com/chap06.html#web-applications-countermeasures-insufficient-attack-protection" target="_blank">Insufficient Attack Protection</a>
-  * WAF
-  * App Intrusion Detection & Response
-  * Active Automated Prevention
+## Traditionally
+
+How have we found bugs in software?
+
+<p><span class="fragment">Um... </span><span class="fragment">We haven't really</span></p>
 
 Note:
-* WAF is the last thing I like to apply,  
-  They're like a band-aid, generally they don't have intimate knowledge of your application
-* Talk through "Application Intrusion Detection and Response"
-* Talk through "Active Automated Prevention"
+Traditionally, how have we found bugs in the software we write?
+
+1. Basically,
+2. we haven't really, or we've done it really late  
 
 ----
 
-App Intrusion Detection->Prevention is reactive
+<p>The catch all <span class="fragment highlight-red">Red Team</span>ing Exercise </p>
 
 Note:
-* This is fine as a layer of defense
-* But we can do better/more
-* How?
+* So...
+
+---
+
+1. our red team has a week or two to find all the defects we've be conscientiously adding for months
 
 ----
 
-By being proactive -> 
-<a href="https://owasp.org/www-community/Free_for_Open_Source_Application_Security_Tools" target="_blank">SAST, DAST</a>
+<p>The catch all <font color="#ff2c2d">Red Team</font>ing Exercise </p>
+
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> ≈$20k per week
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> ≈Engagement: two weeks
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> ≈Software project before release: six months
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> ≈$40k per six months - per project
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> Found: 5 crit, 10 high, 10 med, 10 low severity bugs
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> Many bugs left unfound waiting to be exploited
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> Business decides to only fix the 5 criticals
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> Each bug avg cost of 15+ x fixed when introduced
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> 5 bugs x 15 x $320 = $24000
 
 Note:
-* We can do better/more by removing your app vulnerabilities in the first place.  
-  With concepts & tooling such as SAST & DAST as part of your Dev work-flows
-* If you want to get serious about app-sec, you really need to apply defence in depth
+
+----
+
+<!-- .element: data-transition="none" -->
+
+<p><font color="#ff2c2d">Red Team</font>ing</p>
+
+<div class="intro">
+  <div>
+    <br><br><br><br>
+    <p>Bottom line:</p>
+  </div>
+  <div>
+    <img data-src="proj-img/Elephant.png" class="borderless">
+  </div>
+</div>
+
+<ul>
+  <li>6 months (2 week engagement): <font color="#ff2c2d">$40’000</font></li>
+  <li>Only 5 Red Team bugs fixed: cost: <font color="#ff2c2d">$24000</font></li>
+</ul>
+
+<br>
+
+Note:
+
+----
+
+<!-- .element: data-transition="none" -->
+
+<p><font color="#ff2c2d">Red Team</font>ing</p>
+
+<div class="intro">
+  <div>
+    <br><br><br><br>
+    <p>Bottom line:</p>
+  </div>
+  <div> 
+    <img data-src="proj-img/Elephant.png" class="borderless"> 
+  </div>
+</div>
+
+* Too expensive
+* Too late
+* Too many bugs left unfixed
+
+Note:
+* Too expensive
+* Too late
+* Too many bugs left unfixed because it’s too late in the SDLC and each bug now costs 15* +
+
+----
+
+<!-- .element: data-background-image="proj-img/OWASP_PT.png" data-background-opacity="0.7" -->
+
+Note:
+* Instead of deferring the finding and fixing of security defects to a traditional red teaming exercise, PurpleTeam helps us find and fix our defects as we're creating them
+* How? PurpleTeam runs against our Web Apps as we're creating them, informing us of the security defects we're introducing... in close to real-time
+
+So now we know we need PurpleTeam...
 
 ----  ----
 
-It's been <a href="https://owasp.org/www-chapter-new-zealand/#div-history" target="_blank">8 years</a>
+# How to set-up?
 
-* <!-- .element: class="fragment fade-right" --> <a href="https://purpleteam-labs.com" target="_blank">purpleteam</a> now in alpha and releases being published regularly
-* <!-- .element: class="fragment fade-right" --> It's time to let someone else take over
-* <!-- .element: class="fragment fade-right" --> Pete Nicholls is taking over from me
-* <!-- .element: class="fragment fade-right" --> Next Meetup Last Wed of Sep - Pete & Toni - Ask anything panel
+Head to the <a href="https://purpleteam-labs.com/doc/local/set-up/" target="_blank">set-up</a> page
+
+* <a href="https://purpleteam-labs.com/doc/local/set-up/#docker-network" target="_blank">Docker Network</a>
+* <a href="https://purpleteam-labs.com/doc/local/set-up/#your-system-under-test-_sut_" target="_blank">SUT</a>
+* <a href="https://purpleteam-labs.com/doc/local/set-up/#lambda-functions" target="_blank">Lambda Functions</a>
+* <a href="https://purpleteam-labs.com/doc/local/set-up/#stage-two-containers" target="_blank">S2 Containers</a>
+* <a href="https://purpleteam-labs.com/doc/local/set-up/#orchestrator" target="_blank">Orchestrator</a>
+* <a href="https://purpleteam-labs.com/doc/local/set-up/#testers" target="_blank">Testers</a>
+  * <a href="https://purpleteam-labs.com/doc/local/set-up/#application-scanner" target="_blank">App Scanner</a>
+  * <a href="https://purpleteam-labs.com/doc/local/set-up/#tls-scanner" target="_blank">Tls Scanner</a>
+  * <a href="https://purpleteam-labs.com/doc/local/set-up/#server-scanner" target="_blank">Server Scanner</a>
+* <a href="https://purpleteam-labs.com/doc/local/set-up/#purpleteam-cli" target="_blank">CLI</a>
 
 Note:
-1. I've lead the Chch chapter for 8 years
-2. I'm stepping down, but I'm leaving you with PurpleTeam
-3. It's time to let someone else take over
-4. You'll be in the safe hands of Pete Nicholls
+How do we set it up?
+
+For the CLI README, you're only really interested in the Install and Configure sub-sections for now.
+
+----
+
+## Install options
+
+* <a href="https://github.com/purpleteam-labs/purpleteam#clone-the-git-repository" target="_blank">Clone the git repository</a>
+* <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-locally" target="_blank">NPM install locally</a>
+* <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-globally" target="_blank">NPM install globally</a>
+
+----  ----
+
+# Work flows?
+
+* <a href="https://github.com/purpleteam-labs/purpleteam#clone-the-git-repository-option" target="_blank">Clone the git repository</a>
+* <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-locally-option" target="_blank">NPM install locally</a>
+* <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-globally-option" target="_blank">NPM install globally</a>
+
+Note:
+Great, but what do the work flows look like?
+
+Let's walk through the different ways PurpleTeam can be run and utilised:
+
+* Clone the git repository option
+  * If you are planning on running/debugging purpleteam standalone (with UI)
+* NPM install locally
+  * If you are planning on running/debugging purpleteam as a spawned NodeJS sub process, for example from your NodeJS build pipelines
+* NPM install globally
+  * If you are planning on running/debugging purpleteam from a build pipeline written in a different language
+
+----
+
+<h2><a href="http://purpleteam-labs.com/doc/local/workflow/#full-system-run" target="_blank">Full system run</a></hr>
+
+----
+
+<!-- .element: data-background-iframe="https://www.youtube.com/embed/nJNAbGLCGNY" -->
+
+Note:
+Discuss: Talk through videos
+
+1. Start docker stats (optional)
+2. Start docker-compose-ui
+3. Host lambda functions
+4. Start SUT
+5. Bring S1 containers up
+6. Start CLI
+
+----
+
+<h2><a href="https://purpleteam-labs.com/doc/local/workflow/#emulating-the-aws-lambda-service" target="_blank">Emulating the AWS Lambda service</a></hr>
+
+Note:
+Discuss: headings
+
+----
+
+<h2><a href="https://purpleteam-labs.com/doc/local/workflow/#debugging" target="_blank">Debugging</a></hr>
+
+Note:
+Discuss: headings
+
+----
+
+<!-- .element: data-background-image="proj-img/OWASP_PT.png" data-background-opacity="0.7" -->
+
+<span style="font-size: 5rem; color: #9b6bcc">
+  <a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>
+</span>
+
+</br></br></br></br></br></br>
+
+Note:
+Remember: we're looking for contributors to help build PurpleTeam.
 

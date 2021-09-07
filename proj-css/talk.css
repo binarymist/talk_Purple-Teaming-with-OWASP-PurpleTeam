@@ -8,3 +8,17 @@
   box-shadow: none;
   background: transparent;
 }
+
+/*********************************************
+ * Elephant Slide
+ *********************************************/
+
+.introSlide p {
+  margin: 0px
+}
+
+.intro div {
+  width: 48%;
+  float: left;
+  margin-left: 0.3em;
+}
