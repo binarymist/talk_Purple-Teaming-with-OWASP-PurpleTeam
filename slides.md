@@ -34,7 +34,7 @@ Discuss: the 3.8 year journey that has brought purpleteam from a proof of concep
 * Most of that time has been 7 days a week, two full time jobs
 
 Building a tool that helps Developers write secure code is a great way to learn about security.
-If you want to learn more about information security, We'll assign you a mentor, and you can help us build PurpleTeam.
+If you want to learn more about information security, We'll assign you a mentor, and you can help your self and the community by building PurpleTeam.
 
 ----
 
