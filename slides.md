@@ -3,7 +3,8 @@
 <!--Cover Slide-->
 
 <span style="font-size: 5rem; color: #9b6bcc">
-  <a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>
+  <!--<a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>-->
+  <a href="https://twitter.com/OWASPPurpleTeam" target="_blank"><i class="fab fa-twitter"></i> OWASPPurpleTeam</a>
 </span>
 
 ----  ----
@@ -160,16 +161,30 @@ So now we know we need PurpleTeam...
 
 Head to the <a href="https://purpleteam-labs.com/doc/local/set-up/" target="_blank">set-up</a> page
 
-* <a href="https://purpleteam-labs.com/doc/local/set-up/#docker-network" target="_blank">Docker Network</a>
-* <a href="https://purpleteam-labs.com/doc/local/set-up/#your-system-under-test-_sut_" target="_blank">SUT</a>
-* <a href="https://purpleteam-labs.com/doc/local/set-up/#lambda-functions" target="_blank">Lambda Functions</a>
-* <a href="https://purpleteam-labs.com/doc/local/set-up/#stage-two-containers" target="_blank">S2 Containers</a>
-* <a href="https://purpleteam-labs.com/doc/local/set-up/#orchestrator" target="_blank">Orchestrator</a>
-* <a href="https://purpleteam-labs.com/doc/local/set-up/#testers" target="_blank">Testers</a>
-  * <a href="https://purpleteam-labs.com/doc/local/set-up/#application-scanner" target="_blank">App Scanner</a>
-  * <a href="https://purpleteam-labs.com/doc/local/set-up/#tls-scanner" target="_blank">Tls Scanner</a>
-  * <a href="https://purpleteam-labs.com/doc/local/set-up/#server-scanner" target="_blank">Server Scanner</a>
-* <a href="https://purpleteam-labs.com/doc/local/set-up/#purpleteam-cli" target="_blank">CLI</a>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://purpleteam-labs.com/doc/local/set-up/#docker-network" target="_blank">Docker Network</a></td>
+      <td><a href="https://purpleteam-labs.com/doc/local/set-up/#testers" target="_blank">Testers</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://purpleteam-labs.com/doc/local/set-up/#your-system-under-test-_sut_" target="_blank">SUT</a></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://purpleteam-labs.com/doc/local/set-up/#application-scanner" target="_blank">App Scanner</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://purpleteam-labs.com/doc/local/set-up/#lambda-functions" target="_blank">Lambda Functions</a></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://purpleteam-labs.com/doc/local/set-up/#tls-scanner" target="_blank">Tls Scanner</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://purpleteam-labs.com/doc/local/set-up/#stage-two-containers" target="_blank">S2 Containers</a></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://purpleteam-labs.com/doc/local/set-up/#server-scanner" target="_blank">Server Scanner</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://purpleteam-labs.com/doc/local/set-up/#orchestrator" target="_blank">Orchestrator</a></td>
+      <td><a href="https://purpleteam-labs.com/doc/local/set-up/#purpleteam-cli" target="_blank">CLI</a></td>
+    </tr>
+  </tbody>
+</table>
 
 Note:
 How do we set it up?
@@ -241,10 +256,11 @@ Discuss: headings
 <!-- .element: data-background-image="proj-img/OWASP_PT.png" data-background-opacity="0.7" -->
 
 <span style="font-size: 5rem; color: #9b6bcc">
-  <a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>
+  <!--<a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>-->
+  <a href="https://twitter.com/OWASPPurpleTeam" target="_blank"><i class="fab fa-twitter"></i> OWASPPurpleTeam</a>
 </span>
 
-</br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br>
 
 Note:
 Remember: we're looking for contributors to help build PurpleTeam.
