@@ -9,14 +9,14 @@
 
 ----  ----
 
-<!-- .element: data-background-image="proj-img/shirt.png" data-background-opacity="0.6" -->
+<!-- .element: data-background-image="proj-img/shirt.png" data-background-opacity="0.8" -->
 
 # What is OWASP?
 
 Note:
 * PurpleTeam is a security regression testing CLI and SaaS targeting Web applications and APIs
 * The CLI is specifically targeted at sitting within your build pipelines but can also be run manually
-* The SaaS that does the security testing of your applications and/or APIs can be deployed anywhere
+* The SaaS that does the security testing of your applications and/or APIs, can be deployed anywhere
 
 ----
 
@@ -27,7 +27,7 @@ Note:
 </br></br></br></br></br></br></br>
 
 Note:
-Discuss: the 3.8 year journey that has brought purpleteam from a proof of concept (PoC) to where it is now.
+Discuss: the 3.8 year journey that has brought PurpleTeam from a proof of concept (PoC) to where it is now.
 
 * Finished writing book series to help Developers up-skill their security
 * Lots of workshops with the PoC to elicit Developer feedback and confirm that what I wrote about was actually true
@@ -48,6 +48,8 @@ Discuss
 # Why?
 
 Note:
+(3 min - 3 min section)
+
 * How does PurpleTeam help us as Developers?
 * How does PurpleTeam help us as a business that creates software?
 * Why would I want PurpleTeam in my build pipelines?
@@ -77,7 +79,7 @@ Note:
 
 ---
 
-1. our red team has a week or two to find all the defects we've be conscientiously adding for months
+1. Our red team has a week or two to find all the defects we've be conscientiously adding for months
 
 ----
 
@@ -187,27 +189,38 @@ Head to the <a href="https://purpleteam-labs.com/doc/local/set-up/" target="_bla
 </table>
 
 Note:
-How do we set it up?
+(6 min - 3 min section)
 
-For the CLI README, you're only really interested in the Install and Configure sub-sections for now.
+How do we set it up?
 
 ----
 
-## Install options
+## CLI Install Options
 
 * <a href="https://github.com/purpleteam-labs/purpleteam#clone-the-git-repository" target="_blank">Clone the git repository</a>
 * <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-locally" target="_blank">NPM install locally</a>
 * <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-globally" target="_blank">NPM install globally</a>
 
+Note:
+* Clone the git repository option
+  * If you are planning on running/debugging purpleteam standalone (with UI)
+* NPM install locally
+  * If you are planning on running/debugging purpleteam as a spawned NodeJS sub process, for example from your NodeJS build pipelines
+* NPM install globally
+  * If you are planning on running/debugging purpleteam from a build pipeline written in a different language
+
+
 ----  ----
 
-# Work flows?
+# CLI Work Flows?
 
 * <a href="https://github.com/purpleteam-labs/purpleteam#clone-the-git-repository-option" target="_blank">Clone the git repository</a>
 * <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-locally-option" target="_blank">NPM install locally</a>
 * <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-globally-option" target="_blank">NPM install globally</a>
 
 Note:
+(9 min - 16 min section)
+
 Great, but what do the work flows look like?
 
 Let's walk through the different ways PurpleTeam can be run and utilised:
@@ -225,7 +238,7 @@ Let's walk through the different ways PurpleTeam can be run and utilised:
 
 ----
 
-<!-- .element: data-background-iframe="https://www.youtube.com/embed/nJNAbGLCGNY" -->
+<!-- .element: data-background-iframe="https://www.youtube.com/embed/nJNAbGLCGNY" data-background-interactive -->
 
 Note:
 Discuss: Talk through videos
