@@ -65,7 +65,7 @@ How have we found bugs in software?
 <p><span class="fragment">Um... </span><span class="fragment">We haven't really</span></p>
 
 Note:
-Traditionally, how have we found bugs in the software we write?
+Traditionally, how have we found security bugs in the software we write?
 
 1. Basically,
 2. we haven't really, or we've done it really late  
@@ -153,7 +153,7 @@ Note:
 
 Note:
 * Instead of deferring the finding and fixing of security defects to a traditional red teaming exercise, PurpleTeam helps us find and fix our defects as we're creating them
-* How? PurpleTeam runs against our Web Apps as we're creating them, informing us of the security defects we're introducing... in close to real-time
+* How? PurpleTeam runs against our Web Apps and APIs as we're creating them, informing us of the security defects we're introducing... in close to real-time
 
 So now we know we need PurpleTeam...
 
@@ -234,24 +234,6 @@ Let's walk through the different ways PurpleTeam can be run and utilised:
 
 ----
 
-<h2><a href="http://purpleteam-labs.com/doc/local/workflow/#full-system-run" target="_blank">Full system run</a></hr>
-
-----
-
-<!-- .element: data-background-iframe="https://www.youtube.com/embed/nJNAbGLCGNY" data-background-interactive -->
-
-Note:
-Discuss: Talk through videos
-
-1. Start docker stats (optional)
-2. Start docker-compose-ui
-3. Host lambda functions
-4. Start SUT
-5. Bring S1 containers up
-6. Start CLI
-
-----
-
 <h2><a href="https://purpleteam-labs.com/doc/local/workflow/#emulating-the-aws-lambda-service" target="_blank">Emulating the AWS Lambda service</a></hr>
 
 Note:
@@ -266,6 +248,24 @@ Discuss: headings
 
 ----
 
+<h2><a href="http://purpleteam-labs.com/doc/local/workflow/#full-system-run" target="_blank">Full system run</a></hr>
+
+----
+
+<!-- .element: data-background-iframe="https://www.youtube.com/embed/ACuaP-ZToKw" data-background-interactive -->
+
+Note:
+Discuss: Talk through videos
+
+1. Start docker stats (optional)
+2. Start docker-compose-ui
+3. Host lambda functions
+4. Start SUT
+5. Bring S1 containers up
+6. Start CLI
+
+----
+
 <!-- .element: data-background-image="proj-img/OWASP_PT.png" data-background-opacity="0.7" -->
 
 <span style="font-size: 5rem; color: #9b6bcc">
@@ -277,4 +277,11 @@ Discuss: headings
 
 Note:
 Remember: we're looking for contributors to help build PurpleTeam.
+
+T-shirt?
+
+* What's the biggest win that PurpleTeam can provide?
+* What's the cheapest place to find and fix your security defects and how much more will it cost to find and fix at Post-Release?
+   https://f0.holisticinfosecforwebdevelopers.com/chap06.html#leanpub-auto-cheapest-place-to-deal-with-defects
+
 
