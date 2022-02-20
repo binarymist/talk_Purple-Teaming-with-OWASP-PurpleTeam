@@ -4,7 +4,7 @@
 
 <span style="font-size: 5rem; color: #9b6bcc">
   <!--<a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>-->
-  <a href="https://twitter.com/OWASPPurpleTeam" target="_blank"><i class="fab fa-twitter"></i> OWASPPurpleTeam</a>
+  <a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>
 </span>
 
 ----  ----
@@ -14,9 +14,11 @@
 # What is OWASP?
 
 Note:
-* PurpleTeam is a security regression testing CLI and SaaS targeting Web applications and APIs
-* The CLI is specifically targeted at sitting within your build pipelines but can also be run manually
-* The SaaS that does the security testing of your applications and/or APIs, can be deployed anywhere
+* PurpleTeam is a security regression testing CLI (front-end) and SaaS (back-end) targeting Web applications and APIs, specifically built for Developers
+* The CLI is specifically targeted at sitting within your build pipelines (run headless) but can also be run manually (with a CUI)
+* You can choose from either `local` and/or `cloud` environments
+  * If `local`: You need to set-up both front-end (CLI) & back-end micro-services
+  * If `cloud`: All you need to do is get the CLI on the system you want to run it from, configure it and create a _Job_ file 
 
 ----
 
@@ -27,14 +29,26 @@ Note:
 </br></br></br></br></br></br></br>
 
 Note:
-Discuss: the 3.8 year journey that has brought PurpleTeam from a proof of concept (PoC) to where it is now.
+Discuss: the 4 year journey that has brought PurpleTeam from a proof of concept (PoC) to where it is now.
 
 * Finished writing book series to help Developers up-skill their security
 * Lots of workshops with the PoC to elicit Developer feedback and confirm that what I wrote about was actually true
 * Most of that time has been 7 days a week, two full time jobs
+* I donated PurpleTeam `local` to OWASP in Q1 2021
+* PurpleTeam `cloud` went to market in Q4 of 2021
+* I couldn't get the publicity that was needed to get enough customers on-board to make `cloud` financially viable plus family relationships were getting strained. So I donated `cloud` to OWASP in Q1 2022
+* So now the community gets to reap the benefits of a production ready hosted security regression testing SaaS that you can plug into your build pipelines to continuously test your web apps and APIs
+
 
 Building a tool that helps Developers write secure code is a great way to learn about security.
 If you want to learn more about information security, We'll assign you a mentor, and you can help your self and the community by building PurpleTeam.
+
+----
+
+![PurpleTeam Cloud Architecture](proj-img/purpleteam_cloud_2021-08-min.png) <!-- .element: class="borderless" -->
+
+Note:
+Discuss
 
 ----
 
@@ -154,12 +168,13 @@ Note:
 Note:
 * Instead of deferring the finding and fixing of security defects to a traditional red teaming exercise, PurpleTeam helps us find and fix our defects as we're creating them
 * How? PurpleTeam runs against our Web Apps and APIs as we're creating them, informing us of the security defects we're introducing... in close to real-time
+* PurpleTeam reports show us how to reproduce the attacks that found a given vulnerability, with tips on how not to introduce the same vulnerability again
 
 So now we know we need PurpleTeam...
 
 ----  ----
 
-# How to set-up?
+# `local` set-up
 
 Head to the <a href="https://purpleteam-labs.com/doc/local/set-up/" target="_blank">set-up</a> page
 
@@ -191,7 +206,16 @@ Head to the <a href="https://purpleteam-labs.com/doc/local/set-up/" target="_bla
 Note:
 (6 min - 3 min section)
 
-How do we set it up?
+For `local`: discus
+
+----
+
+# `cloud` set-up
+
+CLI
+
+Note:
+Just install the CLI, the rest is done for you
 
 ----
 
@@ -201,6 +225,10 @@ How do we set it up?
 * <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-locally" target="_blank">NPM install locally</a>
 * <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-globally" target="_blank">NPM install globally</a>
 
+&nbsp;
+
+## Configure CLI
+
 Note:
 * Clone the git repository option
   * If you are planning on running/debugging purpleteam standalone (with UI)
@@ -209,10 +237,11 @@ Note:
 * NPM install globally
   * If you are planning on running/debugging purpleteam from a build pipeline written in a different language
 
+Configure the CLI
 
 ----  ----
 
-# CLI Work Flows?
+# Run CLI
 
 * <a href="https://github.com/purpleteam-labs/purpleteam#clone-the-git-repository-option" target="_blank">Clone the git repository</a>
 * <a href="https://github.com/purpleteam-labs/purpleteam#npm-install-locally-option" target="_blank">NPM install locally</a>
@@ -221,9 +250,7 @@ Note:
 Note:
 (9 min - 16 min section)
 
-Great, but what do the work flows look like?
-
-Let's walk through the different ways PurpleTeam can be run and utilised:
+The following are some ways that PurpleTeam can be run and utilised from the perspective of the CLI which is what drives the back-end:
 
 * Clone the git repository option
   * If you are planning on running/debugging purpleteam standalone (with UI)
@@ -232,23 +259,32 @@ Let's walk through the different ways PurpleTeam can be run and utilised:
 * NPM install globally
   * If you are planning on running/debugging purpleteam from a build pipeline written in a different language
 
+----  ----
+
+# `cloud`
+
+Note:
+If you're using `cloud`, job done.
+
+----  ----
+
+# `local`
+
+Note:
+If you're using local, then there's a bit more to know about running the back-end components.
+
 ----
 
-<h2><a href="https://purpleteam-labs.com/doc/local/workflow/#emulating-the-aws-lambda-service" target="_blank">Emulating the AWS Lambda service</a></hr>
+<h2><a href="https://purpleteam-labs.com/doc/local/workflow/" target="_blank">back-end components workflow</a></h2>
+
+* Emulating the AWS Lambda service `local`y
+* Debugging
+* Full system run
 
 Note:
 Discuss: headings
 
-----
-
-<h2><a href="https://purpleteam-labs.com/doc/local/workflow/#debugging" target="_blank">Debugging</a></hr>
-
-Note:
-Discuss: headings
-
-----
-
-<h2><a href="http://purpleteam-labs.com/doc/local/workflow/#full-system-run" target="_blank">Full system run</a></hr>
+Stop video capture now.
 
 ----
 
@@ -270,13 +306,13 @@ Discuss: Talk through videos
 
 <span style="font-size: 5rem; color: #9b6bcc">
   <!--<a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>-->
-  <a href="https://twitter.com/OWASPPurpleTeam" target="_blank"><i class="fab fa-twitter"></i> OWASPPurpleTeam</a>
+  <a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>
 </span>
 
 </br></br></br></br></br></br></br></br>
 
 Note:
-Remember: we're looking for contributors to help build PurpleTeam.
+We're looking for contributors to come and join the OWASP PurpleTeam core team.
 
 T-shirt?
 
