@@ -3,9 +3,37 @@
 <!--Cover Slide-->
 
 <span style="font-size: 5rem; color: #9b6bcc">
-  <!--<a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>-->
+  <a href="https://twitter.com/binarymist" target="_blank"><i class="fab fa-twitter"></i> binarymist</a><br>
   <a href="https://twitter.com/purpleteamlabs" target="_blank"><i class="fab fa-twitter"></i> purpleteamlabs</a>
 </span>
+
+&nbsp;
+
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> <a href="https://binarymist.io/publication/kims-selected-publications/" target="_blank">Kim's Books</a>
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> <a href="https://binarymist.io/publication/#8" target="_blank">Kim's Podcasts</a>
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> <a href="https://binarymist.io/blog" target="_blank">Kim's Blog</a>
+* <!-- .element: class="fragment fade-right" style="text-align:left" --> Retired OWASP New Zealand Leader
+
+Notes:
+Hi. I'm Kim Carter (AKA binarymist)  
+I was bourn and breed in New Zealand  
+I'm the founder of PurpleTeam-Labs
+
+* I've written a collection of books
+* These are the podcasts I've hosted and been guest on
+* This is my blog
+* Ex OWASP NZ Leader of 8 years for Christchurch 
+
+I'll be walking you through PurpleTeam: The open source security regression testing CLI & SaaS for web applications & APIs
+
+Along with how you can go about inserting the PurpleTeam CLI into your CI & nightly build pipe-lines  
+to find and fix security defects that Developers are introducing daily.
+
+I'll be discussing how the different micro-services communicate with each other,  
+how to debug them  
+and how you can set it all up to get your web applications and APIs under continuous test
+
+(Turn cam off)
 
 ----  ----
 
@@ -36,7 +64,7 @@ Discuss: the 4 year journey that has brought PurpleTeam from a proof of concept 
 * Most of that time has been 7 days a week, two full time jobs
 * I donated PurpleTeam `local` to OWASP in Q1 2021
 * PurpleTeam `cloud` went to market in Q4 of 2021
-* I couldn't get the publicity that was needed to get enough customers on-board to make `cloud` financially viable plus family relationships were getting strained. So I donated `cloud` to OWASP in Q1 2022
+* I couldn't get the publicity that was needed to get enough customers on-board to make `cloud` financially viable plus family relationships were getting strained. So I'm in the process of donating `cloud` to OWASP currently
 * So now the community gets to reap the benefits of a production ready hosted security regression testing SaaS that you can plug into your build pipelines to continuously test your web apps and APIs
 
 
@@ -169,6 +197,7 @@ Note:
 * Instead of deferring the finding and fixing of security defects to a traditional red teaming exercise, PurpleTeam helps us find and fix our defects as we're creating them
 * How? PurpleTeam runs against our Web Apps and APIs as we're creating them, informing us of the security defects we're introducing... in close to real-time
 * PurpleTeam reports show us how to reproduce the attacks that found a given vulnerability, with tips on how not to introduce the same vulnerability again
+* There are also techniques for removing false positives or any defects you're not interested seeing
 
 So now we know we need PurpleTeam...
 
@@ -286,6 +315,9 @@ Discuss: headings
 
 Stop video capture now.
 
+Share reveal.js tab, check the "Share tab audio" button
+
+
 ----
 
 <!-- .element: data-background-iframe="https://www.youtube.com/embed/ACuaP-ZToKw" data-background-interactive -->
@@ -311,8 +343,13 @@ Discuss: Talk through videos
 
 </br></br></br></br></br></br></br></br>
 
+<a href="https://purpleteam-labs.com/community" target="_blank"></i>https://purpleteam-labs.com/community</a>
+
 Note:
+(Turn cam on)  
 We're looking for contributors to come and join the OWASP PurpleTeam core team.
+
+Contact us
 
 T-shirt?
 
